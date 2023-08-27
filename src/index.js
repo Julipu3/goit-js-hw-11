@@ -106,8 +106,7 @@ function renderMarkup(images) {
 
   gallery.insertAdjacentHTML('beforeend', markup);
 
-  lightbox.refresh();
-  lightbox.open(); 
+  lightbox.refresh(); 
 }
 
 function handleButtonVisibility() {
