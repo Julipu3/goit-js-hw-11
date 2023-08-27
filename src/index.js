@@ -110,9 +110,17 @@ function renderMarkup(images) {
   lightbox.open(); 
 }
 
+function handleButtonVisibility() {
+    if (window.scrollY > 200) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  }
+
 const scrollHandler = throttle((e) => {
   handleButtonVisibility();
-  loadMoreHandler(e);
+  loadMoreHandler();
 }, refs.SCROLL_THROTTLE_INTERVAL);
 
 window.addEventListener('scroll', scrollHandler);
